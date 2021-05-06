@@ -1,13 +1,62 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15% auto;
+    overflow: hidden;
+    background-color: #032B43;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.Calculator {
+    width: 340px;
+    height: 300px;
+    position: relative;
+    margin: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+
+.Button {
+    background: #916C80;
+    display: flex;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    font-size: 24px;
+    color: FFE1C6;
+    height: 20%;
+    min-width: 25%;
+}
+
+.Button[data-size="2"] {
+    height: 40%;
+}
+
+.Button[data-value="null"] {
+    pointer-events: none;
+}
+
+.Button:hover {
+    background: #d7ddd3;
+    cursor: default;
+}
+
+.Display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #2b293d;
+    height: 20%;
+    color: #FFC6D9;
+    padding: 2px;
+    font-size: 24px;
+}
+.Keypad {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 80%;
+}
+
