@@ -8,11 +8,15 @@ class Calculator extends Component {
     constructor() {
         super();
         this.state = { data: ''}
+        this.cal = this.cal.bind(this)
+    }
+    cal(...num){
+    return num.join("")
     }
 
     calculate = () => {
         try {
-            const result = eval(this.state.data);
+            const result = this.cal(this.state.data);
             this.setState({data: result});
         } catch (e) {
             this.setState({data: 'error'})
